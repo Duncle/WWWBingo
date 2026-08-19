@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/_Legacy/Scenes/MainMenu.unity
     guid: 6a124488514f7c64eaa8d0ef41643645
   - enabled: 1
     path: Assets/Scenes/BingoScreenDefault.unity
@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/BingoScreenSeasonFinal.unity
     guid: 46a6de20d05ad534298ede1ba4833fe0
   - enabled: 1
-    path: Assets/Scenes/BingoScreenYearFinal.unity
+    path: Assets/_Legacy/Scenes/BingoScreenYearFinal.unity
     guid: ea4da89707988624e890bcae7fb9f148
   - enabled: 0
-    path: Assets/Scenes/InfoScreen.unity
+    path: Assets/_Legacy/Scenes/InfoScreen.unity
     guid: 0b7384bfbc0758d4c8e52aa7c2de7f14
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
