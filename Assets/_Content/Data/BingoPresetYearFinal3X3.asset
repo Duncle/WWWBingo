@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adf500dea0601048ae6e00f2cbf191b, type: 3}
+  m_Name: BingoPresetYearFinal3X3
+  m_EditorClassIdentifier: Assembly-CSharp::BingoPreset
+  bingoType: 2
+  gridSize: 5
+  centerText: "\u0412\u0435\u0434\u0443\u0449\u0438\u0439 \u0432 \u0437\u0430\u043B\u0435"
+  bingoPhrases:
+  - text: 'Вопрос со странными предметами'
+    category: 1
+  - text: 'Вопрос о книге'
+    category: 1
+  - text: 'Вопрос с цитатой'
+    category: 1
+  - text: 'Вопрос про кино'
+    category: 1
+  - text: 'Вопрос не из города'
+    category: 1
+  - text: 'Вопрос про ЧГК'
+    category: 1
+  - text: 'Вопрос с картиной'
+    category: 1
+  - text: 'Восток - дело тонкое'
+    category: 1
+  - text: 'Вопрос от мира науки'
+    category: 1
+  - text: 'Вопрос, связанный с иностранным языком'
+    category: 1
+  - text: 'Вопрос, связанный с музыкой'
+    category: 1
+  - text: 'Вопрос с одеждой'
+    category: 1
+  - text: 'Вопрос из Москвы'
+    category: 2
+  - text: 'Вопрос из Питера'
+    category: 2
+  - text: 'Вопрос из Ростова-На-Дону'
+    category: 2
+  - text: 'Вопрос с Дальнего Востока'
+    category: 2
+  - text: 'Вопрос из города в игорной зоне РФ'
+    category: 2
+  - text: 'Вопрос не из России'
+    category: 2
+  - text: 'Вопрос из Беларуси'
+    category: 2
+  - text: 'Вопрос от детей'
+    category: 3
+  - text: 'Видео вопрос от телезрителя'
+    category: 3
+  - text: 'Видео вопрос от мужчины'
+    category: 3
+  - text: 'Видео вопрос от женщины'
+    category: 3
+  - text: 'Счет 1:1'
+    category: 6
+  - text: 'Счет 2:2'
+    category: 6
+  - text: 'Счет 3:3'
+    category: 6
+  - text: 'Счет 4:4'
+    category: 6
+  - text: 'Счет 5:5'
+    category: 6
+  - text: 'Знатоки выиграют 6:5'
+    category: 6
+  - text: 'Знатоки проиграют 5:6'
+    category: 6
+  - text: 'Знатоки проигрывают 0:3'
+    category: 6
+  - text: 'Знатоки выигрывают 3:0'
+    category: 6
+  - text: 'Обе команды набрали хотя бы 4 очка'
+    category: 6
+  - text: 'Очевидный хрустальный атом'
+    category: 7
+  - text: 'Очевидный лучший вопрос игры'
+    category: 7
+  - text: 'Несколько черных ящиков в одном вопросе'
+    category: 8
+  - text: 'Несколько черных ящиков в течение игры'
+    category: 8
+  - text: 'Начало ЧГК позже указанного на 5 мин'
+    category: 9
+  - text: 'Начало ЧГК позже указанного на 10 мин'
+    category: 9
+  - text: 'Начало ЧГК позже указанного на 15 мин'
+    category: 9
+  - text: 'Хотя бы 3 академика в зале'
+    category: 10
+  - text: 'Хотя бы 4 академика в зале'
+    category: 10
+  - text: 'Хотя бы 5 академиков в зале'
+    category: 10
+  - text: 'Берется минута в кредит'
+    category: 0
+  - text: 'Знатоку делают замечание'
+    category: 0
+  - text: 'Рофл над ведущим'
+    category: 0
+  - text: 'Ведущий задает дополнительный вопрос'
+    category: 0
+  - text: 'Волчок остановился на границе'
+    category: 0
+  - text: 'Отвечает капитан'
+    category: 0
+  - text: 'Показывают Поташева'
+    category: 0
+  - text: 'Досрочный ответ'
+    category: 0
+  - text: 'Берется помощь зала'
+    category: 0
+  - text: 'Защитник телезрителей засчитывает вопрос'
+    category: 0
+  - text: 'Ведущий недоволен выбором версий'
+    category: 0
+  - text: 'Знатоки просят повторить вопрос'
+    category: 0
+  - text: 'Сову получила женщина'
+    category: 0
+  - text: 'Нет единогласного решения по сове'
+    category: 0
+  - text: 'Не все телезрители смогли приехать'
+    category: 0
+  - text: 'Ведущий спрашивает версии в зале'
+    category: 0
