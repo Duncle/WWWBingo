@@ -13,9 +13,11 @@ public class BingoCellView : MonoBehaviour
     public Image CellCheckmark => cellCheckmark;
     
     public void RenderText(string text) => cellText.text = text;
-    public void ToggleCheckmark()
+    public void SetMarked(bool marked)
     {
-        cellCheckmark.gameObject.SetActive(_isCheckmarkActive);
-        _isCheckmarkActive = !_isCheckmarkActive;
+        _isCheckmarkActive = marked;
+        cellCheckmark.gameObject.SetActive(marked);
     }
+
+    public void ToggleCheckmark() => SetMarked(!_isCheckmarkActive);
 }
