@@ -105,8 +105,11 @@ public static class BingoStyle
         float margin = 48, center = w / 2;
         Fill(parent, "Masthead top", margin, 30, w - margin * 2, 2, Ink);
         Fill(parent, "Masthead bottom", margin, 104, w - margin * 2, 2, Ink);
-        Text(parent, "Club", "<color=#B30000>●</color>  КЛУБ ИНТЕЛЛЕКТУАЛОВ", regular, 20, margin, 36, center - 100, 60, Ink);
-        Text(parent, "Issue", issue, regular, 24, center + 80, 36, center - 128, 60, Red, TextAlignmentOptions.MidlineRight);
+        if (!string.IsNullOrEmpty(issue))
+        {
+            Text(parent, "Club", "<color=#B30000>●</color>  КЛУБ ИНТЕЛЛЕКТУАЛОВ", regular, 20, margin, 36, center - 100, 60, Ink);
+            Text(parent, "Issue", issue, regular, 24, center + 80, 36, center - 128, 60, Red, TextAlignmentOptions.MidlineRight);
+        }
         Fill(parent, "Emblem paper", center - 64, 15, 128, 108, Paper);
         Icon(parent, BingoIcon.Shape.Owl, center - 49, 17, 98, Ink);
         Text(parent, "Title", "БИНГО", bold, wide ? 88 : 152, margin, wide ? 108 : 126, w - margin * 2, wide ? 104 : 178, Ink, TextAlignmentOptions.Center);
