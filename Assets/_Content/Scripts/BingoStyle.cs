@@ -111,7 +111,13 @@ public static class BingoStyle
             Text(parent, "Issue", issue, regular, 24, center + 80, 36, center - 128, 60, Red, TextAlignmentOptions.MidlineRight);
         }
         Fill(parent, "Emblem paper", center - 64, 15, 128, 108, Paper);
-        Icon(parent, BingoIcon.Shape.Owl, center - 49, 17, 98, Ink);
+        var logoTexture = Resources.Load<Texture2D>("icon_main_menu_logo");
+        if (logoTexture == null) throw new System.InvalidOperationException("The header logo texture is missing.");
+        float logoWidth = 98, logoHeight = logoWidth * logoTexture.height / logoTexture.width;
+        var logo = Rect(parent, "Header logo", center - logoWidth / 2, 66 - logoHeight / 2, logoWidth, logoHeight)
+            .gameObject.AddComponent<RawImage>();
+        logo.texture = logoTexture;
+        logo.raycastTarget = false;
         Text(parent, "Title", "БИНГО", bold, wide ? 88 : 152, margin, wide ? 108 : 126, w - margin * 2, wide ? 104 : 178, Ink, TextAlignmentOptions.Center);
         float ruleY = wide ? 220 : 320;
         Fill(parent, "Title rule left", center - 315, ruleY, 292, 2, Red);
