@@ -29,6 +29,12 @@ Unity 6.3 (6000.3.9f1). Откройте **Assets/_Content/Scenes/BingoApp.unity
 
 Для itch.io загрузите ZIP с index.html в корне и включите запуск HTML в браузере. Для GitHub Pages разместите содержимое Web-сборки в публикуемой папке. Если хостинг не настраивает заголовки сжатия, используйте Decompression Fallback либо отключите Compression Format в Web Player Settings. Размер iframe рекомендуется от 960×640; портретная ориентация также поддерживается.
 
+### GitHub Pages из этого репозитория
+
+Публикуемая Web-сборка хранится в `docs`: `docs/index.html`, `docs/Build/` и пустой файл `docs/.nojekyll`. В Settings → Pages выберите Deploy from a branch, ветку `main` и папку `/docs`. Для закрытого репозитория требуется тариф GitHub с поддержкой Pages; на GitHub Free репозиторий должен быть публичным.
+
+Для обновления сайта соберите актуальную версию через **Bingo → Build Web (local preview)**, замените содержимое `docs/Build/` и файл `docs/index.html` файлами из `Builds/WebGL`, затем сделайте коммит и push. Сохраните `docs/.nojekyll`. Ожидаемый адрес: https://duncle.github.io/WWWBingo/.
+
 Скачивание PNG реализовано в `Assets/Plugins/WebGL/BingoDownload.jslib` через Blob и ссылку download. Если игра размещена в собственном sandbox-iframe, ему требуется `allow-downloads`. Механизм JS-плагинов описан в [руководстве Unity](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html); локальное хранение PlayerPrefs в Web — в [справке Unity](https://docs.unity3d.com/ScriptReference/PlayerPrefs.html).
 
 ## Проверка

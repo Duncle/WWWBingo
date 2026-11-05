@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fcfbf8">
+  <title>Бинго — Что? Где? Когда?</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #fcfbf8; }
+    body { font-family: Georgia, 'Times New Roman', serif; color: #121212; }
+    #unity-canvas { display: block; width: 100%; height: 100%; height: 100dvh; outline: none; touch-action: none; }
+    #loading { position: fixed; inset: 0; display: grid; place-content: center; text-align: center; padding: 24px; background: #fcfbf8; }
+    h1 { font-size: clamp(64px, 12vw, 128px); margin: 0; }
+    p { font-size: 20px; }
+    progress { width: min(360px, 80vw); height: 4px; accent-color: #b30000; border: 0; }
+    #error { display: none; position: fixed; inset: 0; place-content: center; padding: 32px; text-align: center; background: #fcfbf8; }
+  </style>
+</head>
+<body>
+  <canvas id="unity-canvas" tabindex="0" aria-label="Бинго Что? Где? Когда?"></canvas>
+  <div id="loading"><h1>БИНГО</h1><p>«ЧТО? ГДЕ? КОГДА?»</p><progress id="progress" max="1" value="0"></progress></div>
+  <div id="error" role="alert"><h2>Не удалось открыть бинго</h2><p>Обновите страницу или попробуйте другой браузер.</p></div>
+  <script>
+    var canvas = document.getElementById('unity-canvas');
+    var loader = document.createElement('script');
+    loader.src = 'Build/WebGL.loader.js';
+    loader.onload = function () {
+      createUnityInstance(canvas, {
+        dataUrl: 'Build/WebGL.data.unityweb',
+        frameworkUrl: 'Build/WebGL.framework.js.unityweb',
+        codeUrl: 'Build/WebGL.wasm.unityweb',
+        streamingAssetsUrl: 'StreamingAssets',
+        companyName: "SychCompany",
+        productName: "WWW Bingo",
+        productVersion: "2.10",
+        matchWebGLToCanvasSize: true,
+        showBanner: function (message, type) { if (type === 'error') console.error(message); }
+      }, function (value) {
+        document.getElementById('progress').value = value;
+      }).then(function (instance) {
+        window.bingoInstance = instance;
+        document.getElementById('loading').remove();
+        canvas.focus();
+      }).catch(showError);
+    };
+    function showError(error) {
+      console.error(error);
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('error').style.display = 'grid';
+    }
+    loader.onerror = showError;
+    document.body.appendChild(loader);
+  </script>
+</body>
+</html>
